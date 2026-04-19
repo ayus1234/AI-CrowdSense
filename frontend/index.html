@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI CrowdSense - Smart Event Experience Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob shape1"></div>
+        <div class="blob shape2"></div>
+        <div class="blob shape3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-satellite-dish"></i>
+                <h1>AI CrowdSense</h1>
+            </div>
+            <p>Smart Event Experience Platform</p>
+        </header>
+
+        <main>
+            <!-- Navigation System -->
+            <section class="glass-card full-width">
+                <h2><i class="fa-solid fa-compass"></i> Smart Navigation</h2>
+                <div class="input-group">
+                    <select id="destination-select">
+                        <option value="" disabled selected>Where do you want to go?</option>
+                        <option value="Gate 1">Gate 1</option>
+                        <option value="Gate 2">Gate 2</option>
+                        <option value="Gate 3">Gate 3</option>
+                        <option value="Food Stall A">Food Stall A</option>
+                        <option value="Food Stall B">Food Stall B</option>
+                        <option value="Washrooms">Washrooms</option>
+                    </select>
+                    <button id="btn-get-route" class="btn primary">
+                        Get Route <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div id="route-result" class="result-box hidden">
+                    <!-- Route AI response goes here -->
+                </div>
+            </section>
+
+            <div class="dashboard-grid">
+                <!-- Queue Status -->
+                <section class="glass-card">
+                    <h2><i class="fa-solid fa-clock"></i> Live Queue Status</h2>
+                    <div id="queue-container" class="queue-list">
+                        <p class="loading">Loading queue times...</p>
+                    </div>
+                </section>
+
+                <!-- AI Assistant -->
+                <section class="glass-card">
+                    <h2><i class="fa-solid fa-robot"></i> AI Assistant</h2>
+                    <div class="chat-container">
+                        <div id="chat-history" class="chat-history">
+                            <div class="message ai-message">
+                                Hi! I'm your AI event assistant. Need to find the shortest food queue or best exit?
+                            </div>
+                        </div>
+                        <div class="chat-input-area">
+                            <input type="text" id="ai-question" placeholder="Ask 'Where to get food?'...">
+                            <button id="btn-ask-ai" class="btn icon-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Hackathon Project - AI CrowdSense Team</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
