@@ -53,5 +53,9 @@ python backend/app.py
 ```
 *Navigate to `http://localhost:8080` to interact with the live CrowdSense Dashboard!*
 
+### 🛠 Troubleshooting
+**UI Not Updating on Localhost?** 
+If you make changes to the JavaScript or CSS and they don't appear when running locally, your browser is likely caching the old files. Force a hard refresh (`Ctrl + Shift + R`) or append a version tag to your script source (e.g., `script.js?v=2`) to force the browser to load the latest code.
+
 ---
 *Built for the 2026 AI Innovation Hackathon. Stop standing in lines, start enjoying the event.*
