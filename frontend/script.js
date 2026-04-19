@@ -96,6 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             const data = await res.json();
             
+            // Premium delay for "thinking" UX
+            await new Promise(resolve => setTimeout(resolve, 1200));
+            
             document.getElementById(typingId).remove();
             chatHistory.innerHTML += `<div class="message ai-message">${data.response}</div>`;
         } catch (error) {
