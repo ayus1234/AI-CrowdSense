@@ -51,7 +51,7 @@
             <div class="dashboard-grid">
                 <!-- Queue Status -->
                 <section class="glass-card">
-                    <h2><i class="fa-solid fa-clock"></i> Live Queue Status <span class="live-badge">Live</span></h2>
+                    <h2><i class="fa-solid fa-clock"></i> Live Queue Status <span class="live-badge">🔴 Live</span></h2>
                     <div id="queue-container" class="queue-list">
                         <p class="loading">Loading queue times...</p>
                     </div>
@@ -62,9 +62,7 @@
                     <h2><i class="fa-solid fa-robot"></i> AI Assistant</h2>
                     <div class="chat-container">
                         <div id="chat-history" class="chat-history">
-                            <div class="message ai-message">
-                                Hi! I'm your AI event assistant. Need to find the shortest food queue or best exit?
-                            </div>
+                            <div class="message ai-message" id="welcome-message"></div>
                         </div>
                         <div class="chat-input-area">
                             <input type="text" id="ai-question" placeholder="Ask 'Where to get food?'...">

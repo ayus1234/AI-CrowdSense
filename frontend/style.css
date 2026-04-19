@@ -86,10 +86,11 @@ header {
     gap: 15px;
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    background: linear-gradient(135deg, #a78bfa, #60a5fa);
+    background: linear-gradient(135deg, #ddd6fe, #bfdbfe);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 8px rgba(167, 139, 250, 0.4));
 }
 
 header p {
@@ -221,9 +222,13 @@ select option { background: var(--bg-color); color: white; }
     background: rgba(0, 0, 0, 0.2);
     padding: 15px 20px;
     border-radius: 12px;
-    transition: background 0.3s;
+    transition: all 0.3s ease;
 }
-.queue-item:hover { background: rgba(0, 0, 0, 0.4); }
+.queue-item:hover { 
+    background: rgba(255, 255, 255, 0.05); 
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); 
+    transform: translateX(5px);
+}
 
 .stall-name { font-weight: 600; }
 .wait-time {

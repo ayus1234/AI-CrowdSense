@@ -110,4 +110,19 @@ document.addEventListener('DOMContentLoaded', () => {
     inputQuestion.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') handleAsk();
     });
+
+    // 4. Welcome Message Typing Effect
+    const welcomeMsg = "Hi! I'm your AI event assistant. Need to find the shortest food queue or best exit?";
+    const welcomeEl = document.getElementById("welcome-message");
+    if (welcomeEl) {
+        let textIndex = 0;
+        function typeWriter() {
+            if (textIndex < welcomeMsg.length) {
+                welcomeEl.innerHTML += welcomeMsg.charAt(textIndex);
+                textIndex++;
+                setTimeout(typeWriter, 40);
+            }
+        }
+        typeWriter();
+    }
 });
