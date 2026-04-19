@@ -21,6 +21,7 @@ At large sporting events, attendees waste enormous amounts of time stuck in bott
 * **Premium Glassmorphism UI:** Stunning, responsive front-end designed to wow judges and users alike.
 * **Bias-Aware Recommendation Logic:** Doesn't just blindly send everyone to the shortest queue. Gemini actively distributes traffic to balance the crowd flow across the entire venue.
 * **Live Simulated Data Engine:** Replicates real-time stadium metrics on a backend loop.
+* **Dynamic Animations:** Features custom pulsing UI badges, enhanced button hover states, and high-contrast styling for optimal presentation visibility.
 * **Fully Responsive:** Beautifully adapts from 4K ultrawide monitors down to 400px mobile phones.
 
 ## 🛠️ Technology Stack
