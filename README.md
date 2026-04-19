@@ -8,6 +8,12 @@
 
 **AI CrowdSense** is a smart, real-time venue navigation and queue prediction system designed to dramatically improve the attendee experience at large-scale events (sports stadiums, concerts, airports, and malls).
 
+## 📸 Application Interface
+<div align="center">
+  <img src="assets/dashboard.png" width="48%" alt="Dashboard Overview" />
+  <img src="assets/ai_assistant.png" width="48%" alt="AI Assistant Conversation" />
+</div>
+
 ## 🏆 Problem Addressed
 At large sporting events, attendees waste enormous amounts of time stuck in bottlenecks, standing in massive queues for food or washrooms, and struggling to navigate. This leads to frustrated fans and unequal distribution of crowds for vendors.
 
