@@ -4,6 +4,8 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104.1-009688.svg?logo=fastapi)](https://fastapi.tiangolo.com)
 [![Google Gemini](https://img.shields.io/badge/Google%20GenAI-Gemini_Flash-orange)](https://aistudio.google.com/)
 
+### 🔴 **[Live Demo: Play with AI CrowdSense Online](https://ai-crowdsense-15593284604.europe-west1.run.app)** 🔴
+
 **AI CrowdSense** is a smart, real-time venue navigation and queue prediction system designed to dramatically improve the attendee experience at large-scale events (sports stadiums, concerts, airports, and malls).
 
 ## 🏆 Problem Addressed
