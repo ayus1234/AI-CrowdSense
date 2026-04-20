@@ -1,7 +1,8 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
+from fastapi.middleware.gzip import GZipMiddleware
+from pydantic import BaseModel, Field
 import uvicorn
 import os
 
@@ -19,11 +20,23 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Efficiency: Compress responses
+app.add_middleware(GZipMiddleware, minimum_size=500)
+
+# Security: Add custom security headers
+@app.middleware("http")
+async def add_security_headers(request: Request, call_next):
+    response = await call_next(request)
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    response.headers["X-Frame-Options"] = "DENY"
+    response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
+    return response
+
 class RouteRequest(BaseModel):
-    destination: str
+    destination: str = Field(..., max_length=100)
 
 class AskRequest(BaseModel):
-    question: str
+    question: str = Field(..., max_length=500)
 
 @app.get("/api/queue-status")
 def queue_status():

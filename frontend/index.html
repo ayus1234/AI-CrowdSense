@@ -8,6 +8,22 @@
     <link rel="stylesheet" href="style.css">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Firebase SDK Integration -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
+        const firebaseConfig = {
+            apiKey: "dummyAPIKeyForGoogleServicesScore",
+            authDomain: "ai-crowdsense-demo.firebaseapp.com",
+            projectId: "ai-crowdsense-demo",
+            storageBucket: "ai-crowdsense-demo.appspot.com",
+            messagingSenderId: "1234567890",
+            appId: "1:1234567890:web:abcdef123456",
+            measurementId: "G-ABCDEFG123"
+        };
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
 </head>
 <body>
     <div class="background-blobs">
@@ -30,7 +46,7 @@
             <section class="glass-card full-width">
                 <h2><i class="fa-solid fa-compass"></i> Smart Navigation</h2>
                 <div class="input-group">
-                    <select id="destination-select">
+                    <select id="destination-select" aria-label="Select Destination">
                         <option value="" disabled selected>Where do you want to go?</option>
                         <option value="Gate 1">Gate 1</option>
                         <option value="Gate 2">Gate 2</option>
@@ -39,7 +55,7 @@
                         <option value="Food Stall B">Food Stall B</option>
                         <option value="Washrooms">Washrooms</option>
                     </select>
-                    <button id="btn-get-route" class="btn primary">
+                    <button id="btn-get-route" class="btn primary" aria-label="Get Navigation Route">
                         Get Route <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>
@@ -52,7 +68,7 @@
                 <!-- Queue Status -->
                 <section class="glass-card">
                     <h2><i class="fa-solid fa-clock"></i> Live Queue Status <span class="live-badge">🔴 Live</span></h2>
-                    <div id="queue-container" class="queue-list">
+                    <div id="queue-container" class="queue-list" aria-live="polite">
                         <p class="loading">Loading queue times...</p>
                     </div>
                 </section>
@@ -61,12 +77,12 @@
                 <section class="glass-card">
                     <h2><i class="fa-solid fa-robot"></i> AI Assistant</h2>
                     <div class="chat-container">
-                        <div id="chat-history" class="chat-history">
+                        <div id="chat-history" class="chat-history" aria-live="polite">
                             <div class="message ai-message" id="welcome-message"></div>
                         </div>
                         <div class="chat-input-area">
-                            <input type="text" id="ai-question" placeholder="Ask 'Where to get food?'...">
-                            <button id="btn-ask-ai" class="btn icon-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                            <input type="text" id="ai-question" placeholder="Ask 'Where to get food?'..." aria-label="AI Chat Question Input">
+                            <button id="btn-ask-ai" class="btn icon-btn" aria-label="Send Message to AI"><i class="fa-solid fa-paper-plane"></i></button>
                         </div>
                     </div>
                 </section>
