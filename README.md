@@ -11,8 +11,8 @@
 
 ## 📸 Application Interface
 <div align="center">
-  <img src="assets/dashboard.png" width="48%" alt="Dashboard Overview" />
   <img src="assets/ai_assistant.png" width="48%" alt="AI Assistant Conversation" />
+  <img src="assets/dashboard.png" width="48%" alt="Dashboard Overview" />
 </div>
 
 ## 🏆 Problem Addressed
