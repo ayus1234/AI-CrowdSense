@@ -4,3 +4,4 @@ google-genai
 python-dotenv==1.0.0
 pytest
 httpx
+google-cloud-storage

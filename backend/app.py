@@ -23,13 +23,20 @@ app.add_middleware(
 # Efficiency: Compress responses
 app.add_middleware(GZipMiddleware, minimum_size=500)
 
-# Security: Add custom security headers
+# Security & Efficiency: Add headers
 @app.middleware("http")
 async def add_security_headers(request: Request, call_next):
     response = await call_next(request)
     response.headers["X-Content-Type-Options"] = "nosniff"
     response.headers["X-Frame-Options"] = "DENY"
     response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
+    
+    # Efficiency: Cache static assets, don't cache APIs
+    if request.url.path.startswith("/api/"):
+        response.headers["Cache-Control"] = "no-store, max-age=0"
+    else:
+        response.headers["Cache-Control"] = "public, max-age=86400"
+        
     return response
 
 class RouteRequest(BaseModel):
