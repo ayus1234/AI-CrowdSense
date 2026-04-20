@@ -29,10 +29,12 @@ At large sporting events, attendees waste enormous amounts of time stuck in bott
 * **Live Simulated Data Engine:** Replicates real-time stadium metrics on a backend loop.
 * **Dynamic Animations:** Features an AI welcome message typing effect, engineered AI 'thinking' delays for premium UX, interactive queue row hovers, custom pulsing 'LIVE' badges, and bright projector-optimized contrast styling.
 * **Fully Responsive:** Beautifully adapts from 4K ultrawide monitors down to 400px mobile phones.
+* **Enterprise Grade:** Built with dynamic `GZip` compression, rigorous Pydantic input validation, strict HTTP security headers, comprehensive `pytest` coverage, and ARIA-compliant screen-reader accessibility integrations.
 
 ## 🛠️ Technology Stack
-* **Frontend Layer:** HTML5, CSS3, Vanilla JavaScript
-* **Backend Framework:** Python FastAPI
+* **Frontend Layer:** HTML5, CSS3, Vanilla JavaScript, Google Firebase Analytics
+* **Backend Framework:** Python FastAPI, Pydantic, GZipMiddleware
+* **Testing:** Pytest, HTTPX
 * **AI Integration:** Google GenAI / Gemini 2.5 Flash API
 * **Deployment System:** Cloud native, Dockerized for Google Cloud Run (Single-container architecture)
 
