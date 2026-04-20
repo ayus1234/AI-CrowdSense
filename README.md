@@ -32,10 +32,10 @@ At large sporting events, attendees waste enormous amounts of time stuck in bott
 * **Enterprise Grade:** Built with dynamic `GZip` compression, rigorous Pydantic input validation, strict HTTP security headers, comprehensive `pytest` coverage, and ARIA-compliant screen-reader accessibility integrations.
 
 ## 🛠️ Technology Stack
-* **Frontend Layer:** HTML5, CSS3, Vanilla JavaScript, Google Firebase Analytics
+* **Frontend Layer:** HTML5, CSS3, Vanilla JavaScript, Google Firebase Analytics & Auth
 * **Backend Framework:** Python FastAPI, Pydantic, GZipMiddleware
-* **Testing:** Pytest, HTTPX
-* **AI Integration:** Google GenAI / Gemini 2.5 Flash API
+* **Testing & CI/CD:** Pytest, HTTPX, GitHub Actions
+* **Google Cloud Ecosystem:** Gemini 2.5 Flash API, Cloud Storage
 * **Deployment System:** Cloud native, Dockerized for Google Cloud Run (Single-container architecture)
 
 ## 💻 Running the App Locally
