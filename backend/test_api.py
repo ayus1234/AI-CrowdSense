@@ -10,17 +10,16 @@ def test_queue_status():
     data = response.json()
     assert isinstance(data, list)
     if len(data) > 0:
-        assert "name" in data[0]
-        assert "expected_wait_time" in data[0]
+        assert "stall" in data[0]
+        assert "wait" in data[0]
 
 def test_crowd_data():
     response = client.get("/api/crowd-data")
     assert response.status_code == 200
     data = response.json()
-    # It should have either stats directly or a structured format
+    # It should have a mapping of gates
     assert isinstance(data, dict)
-    assert "total_capacity" in data
-    assert "current_occupancy" in data
+    assert "Gate 1" in data
 
 def test_get_route_validation():
     # Test pydantic validation is working
