@@ -59,5 +59,11 @@ python backend/app.py
 ```
 *Navigate to `http://localhost:8080` to interact with the live CrowdSense Dashboard!*
 
+## 🔮 Future Scope
+
+* **📷 IoT Integration:** Replace simulated data with real-time crowd counting via live camera feeds.
+* **🤝 Vendor Partnerships:** Monetize through data insights and sponsored visibility for food/retail stalls.
+* **📱 Mobile App:** Native iOS & Android app for attendees and a venue-management dashboard.
+
 ---
 *Built for the 2026 AI Innovation Hackathon. Stop standing in lines, start enjoying the event.*
